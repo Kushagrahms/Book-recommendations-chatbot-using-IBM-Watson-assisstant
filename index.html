@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Book Recommendation Chatbot</title>
+</head>
+<body>
+  <h1>Book Recommendation Bot</h1>
+  <p>Ask me anything about books!</p>
+
+  <!-- IBM Watson Assistant Embed Script -->
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "a19ac2ba-67be-47ca-ac31-1960760002b5", // The ID of this integration.
+    region: "au-syd", // The region your integration is hosted in.
+    serviceInstanceID: "a66fd9df-3012-4a58-9b10-65f7686a0404", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+</body>
+</html>
